@@ -1,0 +1,45 @@
+[package]
+name = "lumora-automation"
+version = "2.0.0"
+edition = "2021"
+authors = ["Lumora Team"]
+description = "High-performance automation engine for Lumora AI OS Companion"
+
+[lib]
+name = "lumora_automation"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+windows = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_Graphics_Gdi",
+    "Win32_System_Registry",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_Security",
+    "Win32_System_Memory",
+    "Win32_UI_Accessibility",
+]}
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["serde"] }
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+rayon = "1.7"
+dashmap = "5.5"
+crossbeam = "0.8"
+parking_lot = "0.12"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 1
