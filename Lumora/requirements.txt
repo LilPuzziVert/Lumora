@@ -1,0 +1,66 @@
+# LUMORA AI OS Companion - Requirements
+# Full-Access AI Assistant v2.0.0
+
+# Core system libraries
+psutil>=5.9.0           # System monitoring and process management
+pywin32>=300            # Windows API access
+wmi>=1.5.1              # Windows Management Instrumentation
+
+# GUI and visualization
+tkinter                 # GUI framework (built-in with Python)
+Pillow>=9.0.0          # Image processing for OCR and screenshots
+matplotlib>=3.5.0      # Data visualization for statistics
+
+# Computer Vision and OCR
+opencv-python>=4.5.0   # Computer vision and image processing
+pytesseract>=0.3.9     # OCR text extraction
+numpy>=1.21.0          # Numerical computing
+
+# AI and Machine Learning
+torch>=1.12.0          # PyTorch for local AI models
+transformers>=4.20.0   # Hugging Face transformers
+sentence-transformers>=2.2.0  # Sentence embeddings
+
+# Networking and async
+aiohttp>=3.8.0         # Async HTTP client/server
+aiofiles>=0.8.0        # Async file operations
+websockets>=10.3       # WebSocket support
+
+# Data handling
+sqlite3                # Database (built-in with Python)
+pandas>=1.4.0          # Data analysis
+json                   # JSON handling (built-in)
+yaml>=6.0              # YAML configuration
+
+# Cryptography and security
+pycryptodome>=3.15.0   # Encryption and security
+cryptography>=37.0.0   # Additional crypto functions
+
+# System integration
+pystray>=0.19.0        # System tray integration
+plyer>=2.1.0           # Platform-specific features
+keyboard>=0.13.5       # Keyboard monitoring
+mouse>=0.7.1           # Mouse monitoring
+
+# Voice and audio
+speech-recognition>=3.8.1  # Voice recognition
+pyttsx3>=2.90          # Text-to-speech
+pyaudio>=0.2.11        # Audio processing
+
+# Utilities
+click>=8.1.0           # Command line interface
+colorama>=0.4.5        # Colored terminal output
+tqdm>=4.64.0           # Progress bars
+python-dateutil>=2.8.2 # Date utilities
+
+# Development and testing
+pytest>=7.1.0          # Testing framework
+pytest-asyncio>=0.19.0 # Async testing
+black>=22.6.0          # Code formatting
+flake8>=5.0.0          # Code linting
+
+# Optional: Enhanced features
+# winshell>=0.6          # Windows shell integration
+# win10toast>=0.9       # Windows 10 notifications
+# pygetwindow>=0.0.9     # Window management
+# pyautogui>=0.9.53      # GUI automation backup
