@@ -1,0 +1,30 @@
+name: LumaHUD Build
+
+on:
+  push:
+    paths:
+      - 'LumaHUD/**'
+      - '.github/workflows/lumahud-build.yml'
+  pull_request:
+    paths:
+      - 'LumaHUD/**'
+      - '.github/workflows/lumahud-build.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build LumaHUD
+    runs-on: macos-latest
+    env:
+      CODE_SIGNING_ALLOWED: NO
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show Swift version
+        run: swift --version
+
+      - name: Build package
+        run: swift build --package-path LumaHUD

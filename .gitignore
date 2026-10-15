@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager and Xcode build products
+.build/
+**/.build/
+build/
+DerivedData/
+**/DerivedData/
+*.app/
+*.dSYM/
+*.xcarchive/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+**/xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Local environment and signing material
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.der
+*.mobileprovision
+*.provisionprofile
+.secrets/
+**/.secrets/
+*secret*
+*credential*
